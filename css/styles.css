@@ -1,0 +1,71 @@
+:root {
+    --blanco: #fff;
+    --negro: #000;
+    --principal: #599ac5;
+}
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; 
+}
+
+*,
+*:before
+*:after {
+    box-sizing: inherit; 
+} 
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    margin-top: 30rem;
+}
+img{
+    max-width: 100%;
+}
+.dp-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    column-gap: 2rem;
+}
+.contenido{
+    padding: 1rem;
+}
+.contenido__titulo{
+    color: var(--principal);
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+.contenido__boton{
+    display: inline-block;
+    border: none;
+    background: var(--principal);
+    margin-top: 3rem;
+    border-radius: .7rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .contenedor{
+        margin-top: 2rem;
+    }
+    .dp-grid{
+        display: block;
+    }
+    .contenido__titulo{
+        text-align: center;
+    }
+    .contenido__boton{
+        width: 100%;
+    }
+}
